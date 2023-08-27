@@ -7,6 +7,7 @@ import {Stack} from "./layouts/sections/stack/Stack";
 import {Project} from "./layouts/sections/projects/Project";
 import {Contact} from "./layouts/sections/contact/Contact";
 import styled from "styled-components";
+import {Footer} from "./layouts/footer/Footer";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Stack/>
             <Project/>
             <Contact/>
+            <Footer/>
 
 
         </div>

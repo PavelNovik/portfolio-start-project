@@ -1,21 +1,28 @@
 import React from 'react';
 import styled from "styled-components";
 import userPhoto from "../../../assets/img/user.webp"
+import {ContainerBox} from "../../../components/ContainerBox";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <Title>
-                Hi <span>👋</span>, <br/>
-                My name is <br/>
-                <span> Pavan MG </span> <br/>
-                I build things for web
-            </Title>
-            <Photo>
-                <div>
-                    <img src={userPhoto} alt="user"/>
-                </div>
-            </Photo>
+            <ContainerBox>
+                <Wrapper>
+                    <Title>
+                        Hi <span>👋</span>, <br/>
+                        My name is <br/>
+                        <span> Pavan MG </span> <br/>
+                        I build things for web
+                    </Title>
+                    <Photo>
+                        <div>
+                            <img src={userPhoto} alt="user"/>
+                        </div>
+                    </Photo>
+                </Wrapper>
+
+
+            </ContainerBox>
         </StyledMain>
     );
 };
@@ -24,7 +31,13 @@ const StyledMain = styled.section`
   min-height: 60vh;
   background-color: #ffd79c;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  
+`
+const Wrapper = styled.div`
+display: flex;
+  justify-content: space-between;
   align-items: center;
 `
 const Title = styled.h1`

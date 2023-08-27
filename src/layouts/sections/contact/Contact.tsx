@@ -28,8 +28,9 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-min-height: 25vh;
-text-align: center;
+  min-height: 25vh;
+  text-align: center;
+  background-color: #babaff;
 `
 const Title = styled.h2`
   font-size: 58px;

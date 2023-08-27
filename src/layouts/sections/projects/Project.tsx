@@ -30,11 +30,11 @@ export const Project = () => {
 };
 
 const StyledProject = styled.section`
-min-height: 100vh;
-  background-color: darkgrey;
+  min-height: 100vh;
+  background-color: #efefef;
   text-align: center;
   padding-bottom: 100px;
-  
+
 `
 const Title = styled.h2``
 
@@ -43,10 +43,10 @@ const Text = styled.span``
 const Wrapper = styled.div`
   width: 90%;
   row-gap: 60px;
-  column-gap: 30px;
+  
   margin: 100px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `
