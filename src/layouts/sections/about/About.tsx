@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {ExpCard} from "./exp/ExpCard";
-import {EdCard} from "./ed/EdCard";
+import {ExpCard} from "../../../components/cards/ExpCard";
+import {EdCard} from "../../../components/cards/EdCard";
 import image from "../../../assets/img/drawing.png"
 
 export const About = () => {
