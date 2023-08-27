@@ -3,10 +3,13 @@ import styled from "styled-components";
 import {ExpCard} from "../../../components/cards/ExpCard";
 import {EdCard} from "../../../components/cards/EdCard";
 import image from "../../../assets/img/drawing.png"
+import {ContainerBox} from "../../../components/ContainerBox";
 
 export const About = () => {
     return (
         <StyledAbout>
+            <ContainerBox>
+
             <Wrapper>
                 <Title>About Me</Title>
                 <Text>The Generator App is an online tool that helps you to export ready-made templates ready to work as
@@ -28,6 +31,7 @@ export const About = () => {
             <Container>
                 <img src={image} alt="block"/>
             </Container>
+            </ContainerBox>
         </StyledAbout>
     );
 };

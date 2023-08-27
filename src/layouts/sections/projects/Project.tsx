@@ -7,19 +7,23 @@ import proj3 from "../../../assets/img/proj-3.webp";
 import proj4 from "../../../assets/img/proj-4.webp";
 import proj5 from "../../../assets/img/proj-5.webp";
 import proj6 from "../../../assets/img/proj-6.webp";
+import {ContainerBox} from "../../../components/ContainerBox";
 
 const projects: Array<string> = [proj1, proj2, proj3, proj4,proj5,proj6]
 
 export const Project = () => {
     return (
         <StyledProject>
-            <Title>Projects</Title>
-            <Text>Things I’ve built so far</Text>
-            <Wrapper>
-                {projects.map((item) => {
-                    return <ProjCard image={item}/>
-                })}
-            </Wrapper>
+            <ContainerBox>
+                <Title>Projects</Title>
+                <Text>Things I’ve built so far</Text>
+                <Wrapper>
+                    {projects.map((item) => {
+                        return <ProjCard image={item}/>
+                    })}
+                </Wrapper>
+
+            </ContainerBox>
 
         </StyledProject>
     );
