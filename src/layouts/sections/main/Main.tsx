@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import userPhoto from "../../assets/img/user.webp"
+import userPhoto from "../../../assets/img/user.webp"
 
 export const Main = () => {
     return (
