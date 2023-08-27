@@ -1,0 +1,28 @@
+import React from 'react';
+import styled from "styled-components";
+import {Logo} from "../../components/logo/Logo";
+import {Menu} from "../../components/menu/Menu";
+import {Social} from "../../components/social/Social";
+
+const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const socials = ["git", "twit", "linkedin"]
+
+
+export const Header = () => {
+    return (
+        <StyledHeader>
+            <Logo/>
+            <Menu menuItems={items}/>
+            <Social socialItems={socials}/>
+
+        </StyledHeader>
+    );
+};
+
+const StyledHeader = styled.header`
+  min-height: 100px;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`
