@@ -44,7 +44,7 @@ const StyledAbout = styled.section`
 const Container = styled.div`
   position: absolute;
   top: -150px;
-  right: 0px;
+  right: 0;
 `
 const Wrapper = styled.div`
   width: 50%`
