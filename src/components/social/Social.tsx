@@ -13,7 +13,7 @@ export const Social = (props: SocialPropsType) => {
                 props.socialItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <a href="#"><Icon iconId={item} width={"30"} height={"30"} viewBox={"0 0 32 32"}/></a>
+                            <a href="#"><Icon iconId={item} width={"32"} height={"32"} viewBox={"0 0 32 32"}/></a>
                         </li>
                     )}
                 )
