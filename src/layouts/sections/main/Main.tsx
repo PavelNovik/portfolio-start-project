@@ -59,6 +59,7 @@ const Photo = styled.div`
     width: 349px;
     object-fit: cover;
     border-radius: 50%;
+   
   }
 
 `

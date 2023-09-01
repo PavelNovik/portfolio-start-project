@@ -6,6 +6,8 @@ export const Theme = {
         buttonText: "#018C0F",
         colorsGrey: "#EBEAED",
         headingColor: "#1E0E62",
+
+        buttonBg: "#D7FFE0",
     }
 
 }

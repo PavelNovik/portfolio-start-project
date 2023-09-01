@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {ExpCard} from "../../../components/cards/ExpCard";
-import {EdCard} from "../../../components/cards/EdCard";
+import {ExpCard} from "./aboutCards/ExpCard";
+import {EdCard} from "./aboutCards/EdCard";
 import image from "../../../assets/img/drawing.png"
 import {ContainerBox} from "../../../components/ContainerBox";
 import {Theme} from "../../../styles/Theme";
@@ -38,22 +38,29 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  background: right / contain no-repeat url(${image});
-  //background-image: url(${image});
-  //background-repeat: no-repeat;
-  //background-position: right;
-  //background-size: contain;
+  background: right bottom / contain no-repeat url(${image}) border-box;
+  // background-image: url(${image});
+  // background-repeat: no-repeat;
+  // background-position: right top;
+  // background-size: contain;
+ 
 
 `
 
 const Wrapper = styled.div`
-  width: 50%`
+  width: 60%`
 const Title = styled.h2`
   color: ${Theme.colors.titleColor};
   font-size: 42px;
   font-weight: 700;
   line-height: 1.24; /* 123.81% */
   letter-spacing: -0.4px;
+
+  margin: 38px 0;
+  
+  &:first-child {
+    margin-top: 0;
+  }
 `
 const Text = styled.p`
   color: ${Theme.colors.darkContent};

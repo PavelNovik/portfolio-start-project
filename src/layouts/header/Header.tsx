@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
     align-items: flex-start;
     justify-content: space-between;
     padding-top: 40px;
-   
+   margin-bottom: 100px;
   }
 
   ${FlexWrapper} {
