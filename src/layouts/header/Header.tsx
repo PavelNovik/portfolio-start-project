@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
-import {Social} from "../../components/social/Social";
-import {ContainerBox} from "../../components/ContainerBox";
+import { Social } from "../../components/social/Social";
+import { ContainerBox } from "../../components/ContainerBox";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {HeaderLogo} from "./headerLogo/HeaderLogo";
 
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -14,28 +15,30 @@ export const Header = () => {
     return (
         <StyledHeader>
             <ContainerBox>
-                <Wrapper>
-                    <Logo/>
-                    <Menu menuItems={items}/>
-                    <Social socialItems={socials}/>
-                </Wrapper>
-
+                <HeaderLogo />
+                <FlexWrapper justify={"space-between"} align={"flex-end"}>
+                    <HeaderMenu menuItems={items} />
+                    <Social socialItems={socials} />
+                </FlexWrapper>
             </ContainerBox>
-
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-  min-height: 100px;
-  background-color: blanchedalmond;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 
-`
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  ${ContainerBox} {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 40px;
+   
+  }
+
+  ${FlexWrapper} {
+    //padding-top: 5px;
+    gap: 50px;
+    height: 100%;
+  }
+
 `

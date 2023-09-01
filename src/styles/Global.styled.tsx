@@ -1,4 +1,5 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import { Theme } from './Theme';
 
 export const GlobalStyled = createGlobalStyle`
   *, *::before, *::after {
@@ -14,15 +15,20 @@ export const GlobalStyled = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: ${Theme.colors.darkContent};
   }
 
   a {
     text-decoration: none;
+    color: ${Theme.colors.darkContent};
   }
 
   ul {
     list-style: none;
   }
 
+  section {
+    padding: 100px 0;
+  }
 
 `

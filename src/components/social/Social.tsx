@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../icon/Icon";
+import { Icon } from "../icon/Icon";
+import { Link } from '../Link';
 
 type SocialPropsType = {
     socialItems: Array<string>
@@ -13,24 +14,26 @@ export const Social = (props: SocialPropsType) => {
                 props.socialItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <a href="#"><Icon iconId={item} width={"32"} height={"32"} viewBox={"0 0 32 32"}/></a>
+                            <Link href="#"><Icon iconId={item} width={"32"} height={"32"} viewBox={"0 0 32 32"} /></Link>
                         </li>
-                    )}
+                    )
+                }
                 )
             }
         </StyledSocial>
     );
 };
 
-const StyledSocial= styled.ul`
+const StyledSocial = styled.ul`
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 
-  li {
-    a {
-      text-decoration: none;
-    }
-  }`
+  li:nth-child(2) ${Link} {
+    transform: translate(-1px, -2px);
+  }
+
+  
+  `
