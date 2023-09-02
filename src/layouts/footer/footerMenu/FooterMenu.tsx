@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
-import { Link } from '../Link';
-import { Theme } from '../../styles/Theme';
+import { Link } from '../../../components/Link';
+import { Theme } from '../../../styles/Theme';
 
 
 type MenuPropsType = {
     menuItems: Array<string>,
 
 }
-export const Menu = (props: MenuPropsType) => {
+export const FooterMenu = (props: MenuPropsType) => {
     return (
         <StyledMenu>
             <ul>

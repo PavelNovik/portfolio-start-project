@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import {ContainerBox} from "../../components/ContainerBox";
-import {Menu} from "../../components/menu/Menu";
+import {FooterMenu} from "./footerMenu/FooterMenu";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {Theme} from "../../styles/Theme";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
@@ -9,38 +11,40 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <ContainerBox>
-                <Wrapper>
-                    <Menu menuItems={items}/>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <FooterMenu menuItems={items}/>
                     <p><span>Designed and built by </span>Pavan MG <span> with </span>Love<span> & </span>Coffee</p>
 
-                </Wrapper>
+                </FlexWrapper>
             </ContainerBox>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-  min-height: 10vh;
-  background-color: #fdc6fd;
-  display: flex;
-  align-items: center;
-`
 
-const Wrapper = styled.div`
-  border-top: 2px solid rgba(102, 102, 102, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${FlexWrapper} {
+    color: ${Theme.colors.titleColor};
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45; /* 144.444% */
 
-  p {
-    background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    p {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
 
-    span {
-      -webkit-text-fill-color: rgba(102, 102, 102, 1);
+      background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 45px 0 60px;
+
+      span {
+        -webkit-text-fill-color: ${Theme.colors.darkContent};
+      }
+
+
     }
   }
-
 `

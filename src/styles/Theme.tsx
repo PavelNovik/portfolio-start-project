@@ -7,6 +7,8 @@ export const Theme = {
         colorsGrey: "#EBEAED",
         headingColor: "#1E0E62",
 
+        cardText: "#000000",
+
         buttonBg: "#D7FFE0",
     }
 
