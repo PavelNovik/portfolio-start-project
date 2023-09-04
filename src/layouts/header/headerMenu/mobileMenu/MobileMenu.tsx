@@ -1,16 +1,16 @@
 import React from 'react';
+import {Link} from "../../../../components/Link";
 import styled from "styled-components";
-import {Link} from "../../../components/Link";
-import {Theme} from "../../../styles/Theme";
+import {Theme} from "../../../../styles/Theme";
 
 
 type HeaderMenuPropsType = {
     menuItems: Array<string>,
 
 }
-export const HeaderMenu = (props: HeaderMenuPropsType) => {
+export const MobileMenu: React.FC<HeaderMenuPropsType> = (props: HeaderMenuPropsType) => {
     return (
-        <StyledHeaderMenu>
+        <StyledMobileMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return (
@@ -20,11 +20,11 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
                     )
                 })}
             </ul>
-        </StyledHeaderMenu>
+        </StyledMobileMenu>
     );
 };
 
-const StyledHeaderMenu = styled.nav`
+const StyledMobileMenu = styled.nav`
   ul {
     display: flex;
     align-items: center;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export const HeaderIcon = () => {
+export const HeaderIcon: React.FC = () => {
     return (
         <svg width="97" height="59" viewBox="0 0 97 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="logo 1" clip-path="url(#clip0_2_5657)">
