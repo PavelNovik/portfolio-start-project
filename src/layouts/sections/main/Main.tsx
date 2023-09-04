@@ -53,7 +53,6 @@ const Photo = styled.div`
   flex-shrink: 0;
   height: 365px;
   width: 365px;
-  flex-shrink: 0;
   border-radius: 50%;
   background: linear-gradient(rgba(231, 15, 170, 1), rgba(0, 192, 253, 1));
 

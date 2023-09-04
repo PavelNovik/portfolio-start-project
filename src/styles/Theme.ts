@@ -10,6 +10,12 @@ export const Theme = {
         cardText: "#000000",
 
         buttonBg: "#D7FFE0",
+    },
+
+    media: {
+        desktop: "screen and (min-width: 1140px)",
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 
 }
