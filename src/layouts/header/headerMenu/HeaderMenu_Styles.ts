@@ -2,17 +2,28 @@ import styled from "styled-components";
 import {Link} from "../../../components/Link";
 import {font} from "../../../styles/Common";
 import {Theme} from "../../../styles/Theme";
+import {Social} from "../../../components/social/Social";
 
 
 const DesktopMenu = styled.nav`
- 
-  ul {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
 `
+const MenuItems = styled.ul`
+  max-width: 610px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
 const MenuItem = styled.li`
+  &:first-child {
+    margin-left: 15px;
+  }
+
   ${Link} {
     ${font({
       family: '"DM Sans", sans-serif',
@@ -27,5 +38,6 @@ const MenuItem = styled.li`
 `
 export const S = {
     DesktopMenu,
+    MenuItems,
     MenuItem
 }

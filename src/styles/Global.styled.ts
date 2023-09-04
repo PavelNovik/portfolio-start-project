@@ -27,8 +27,19 @@ export const GlobalStyled = createGlobalStyle`
     list-style: none;
   }
 
+  button {
+    background-color: unset;
+    border: none;
+    color: ${Theme.colors.titleColor};
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   section {
     padding: 100px 0;
+
     &:first-of-type {
       margin-top: 100px;
     }
