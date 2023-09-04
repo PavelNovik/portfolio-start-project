@@ -50,6 +50,7 @@ const Photo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   height: 365px;
   width: 365px;
   flex-shrink: 0;
