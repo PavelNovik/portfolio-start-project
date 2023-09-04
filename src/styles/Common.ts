@@ -9,7 +9,7 @@ type FontPropsType = {
     Fmax?: number,
 }
 export const font = ({family, weight, color, lineHeight, Fmin, Fmax} : FontPropsType) => `
- font-family: ${family || "Poppins"};
+ font-family: ${family || "Poppins, sans-serif"};
  font-weight: ${weight || 400};
  color: ${color || Theme.colors.titleColor};
  line-height: ${lineHeight || 1.2};
