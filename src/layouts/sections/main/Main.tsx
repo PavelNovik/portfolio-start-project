@@ -52,6 +52,7 @@ const Photo = styled.div`
   align-items: center;
   height: 365px;
   width: 365px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: linear-gradient(rgba(231, 15, 170, 1), rgba(0, 192, 253, 1));
 

@@ -21,6 +21,7 @@ export const GlobalStyled = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${Theme.colors.darkContent};
+    
   }
 
   ul {
@@ -29,6 +30,7 @@ export const GlobalStyled = createGlobalStyle`
 
   section {
     padding: 100px 0;
+   
   }
 
 `
