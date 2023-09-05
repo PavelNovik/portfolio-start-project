@@ -1,16 +1,15 @@
 import React from 'react';
-import styled from "styled-components";
 import { Link } from '../../../components/Link';
-import { Theme } from '../../../styles/Theme';
+import { S } from '../Footer_Styles';
 
 
 type MenuPropsType = {
     menuItems: Array<string>,
 
 }
-export const FooterMenu = (props: MenuPropsType) => {
+export const FooterMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
     return (
-        <StyledMenu>
+        <S.Menu>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return (
@@ -20,17 +19,7 @@ export const FooterMenu = (props: MenuPropsType) => {
                     )
                 })}
             </ul>
-        </StyledMenu>
+        </S.Menu>
     );
 };
 
-const StyledMenu = styled.nav`
-ul {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  
-  }
- 
-
-`

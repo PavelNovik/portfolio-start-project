@@ -7,5 +7,5 @@ export const ContainerBox = styled.div`
   
   padding: 0 15px;
   margin: 0 auto;
-  outline: 1px solid orange;
+  //outline: 1px solid orange;
 `

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import {ProjCard} from "./projCards/ProjCard";
 import proj1 from "../../../assets/img/proj-1.webp";
 import proj2 from "../../../assets/img/proj-2.webp";
@@ -9,43 +8,24 @@ import proj5 from "../../../assets/img/proj-5.webp";
 import proj6 from "../../../assets/img/proj-6.webp";
 import {ContainerBox} from "../../../components/ContainerBox";
 import {SectionText, SectionTitle} from "../../../components/SectionTitleText";
+import {S} from "./Project_Styles"
 
-const projects: Array<string> = [proj1, proj2, proj3, proj4,proj5,proj6]
+const projects = [proj1, proj2, proj3, proj4,proj5,proj6]
 
-export const Project = () => {
+export const Project: React.FC = () => {
     return (
-        <StyledProject>
+        <S.Project>
             <ContainerBox>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <Wrapper>
+                <S.Wrapper>
                     {projects.map((item) => {
                         return <ProjCard image={item}/>
                     })}
-                </Wrapper>
+                </S.Wrapper>
 
             </ContainerBox>
 
-        </StyledProject>
+        </S.Project>
     );
 };
-
-const StyledProject = styled.section`
-  text-align: center;
-
-  ${SectionText} {
-    margin: 50px 0 110px;
-
-  }
-
-`
-const Wrapper = styled.div`
- 
-  row-gap: 60px;
-  
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-`

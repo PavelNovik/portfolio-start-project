@@ -16,6 +16,8 @@ export const GlobalStyled = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${Theme.colors.darkContent};
+
+    min-width: 360px;
   }
 
   a {
@@ -39,9 +41,15 @@ export const GlobalStyled = createGlobalStyle`
 
   section {
     padding: 100px 0;
-
+        
     &:first-of-type {
       margin-top: 100px;
+    }
+    @media ${Theme.media.tablet} {
+      padding: 75px 0;
+    }
+    @media ${Theme.media.mobile} {
+      padding: 50px 0;
     }
   }
 

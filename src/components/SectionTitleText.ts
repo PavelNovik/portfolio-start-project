@@ -1,18 +1,15 @@
 import styled from "styled-components";
 import {Theme} from "../styles/Theme";
+import {font} from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-  color: ${Theme.colors.titleColor};
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 0.54; /* 54.167% */
-
+  ${font({color: `${Theme.colors.titleColor}`, weight: 700, lineHeight: 0.54, Fmax: 48, Fmin: 36})} 
 `
-export const SectionText = styled.span`
-  display: inline-block;
-  color: ${Theme.colors.darkContent};
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 0.81; /* 81.25% */
-
+export const SectionText = styled.p`
+  //display: inline-block;
+  ${font({color: `${Theme.colors.darkContent}`, weight: 400, lineHeight: 0.81, Fmax: 32, Fmin: 20})} 
+  
+  @media ${Theme.media.tablet} {
+  line-height: 1.2;
+}
 `
