@@ -4,7 +4,7 @@ import {S} from "../HeaderMenu_Styles";
 
 export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
     return (
-        <ul>
+        <S.MenuItems>
             {props.menuItems.map((item, index) => {
                 return (
                     <S.MenuItem key={index}>
@@ -12,7 +12,7 @@ export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Ar
                     </S.MenuItem>
                 )
             })}
-        </ul>
+        </S.MenuItems>
     );
 };
 

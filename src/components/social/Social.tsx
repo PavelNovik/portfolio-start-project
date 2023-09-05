@@ -31,9 +31,13 @@ const StyledSocial = styled.ul`
   align-items: flex-start;
   gap: 20px;
 
-li:nth-child(2) ${Link} {
-  transform: translate(-1px, -2px);
-}
+  li:first-child {
+    margin-left: 15px;
+  }
+
+  li:nth-child(2) ${Link} {
+    transform: translate(-1px, -2px);
+  }
 
 
 `

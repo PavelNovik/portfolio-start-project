@@ -18,9 +18,9 @@ const Header = styled.header`
   }
 
   ${FlexWrapper} {
-    //padding-top: 5px;
-    gap: 50px;
     height: 100%;
+    max-width: 800px;
+    width: 100%;
   }
 
 `
