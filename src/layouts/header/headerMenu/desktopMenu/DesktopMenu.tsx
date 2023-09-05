@@ -12,7 +12,7 @@ type HeaderMenuPropsType = {
 export const DesktopMenu: React.FC<HeaderMenuPropsType> = (props: HeaderMenuPropsType) => {
     return (
         <S.DesktopMenu>
-            <Menu menuItems={props.menuItems}/>
+            <Menu isOpen={false} menuItems={props.menuItems}/>
             <Social socialItems={props.socialItems}/>
         </S.DesktopMenu>
     );

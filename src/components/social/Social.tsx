@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { Link } from '../Link';
+import {Theme} from "../../styles/Theme";
 
 type SocialPropsType = {
     socialItems: Array<string>
@@ -38,6 +39,10 @@ const StyledSocial = styled.ul`
   li:nth-child(2) ${Link} {
     transform: translate(-1px, -2px);
   }
-
+@media ${Theme.media.tablet} {
+  li:first-child {
+    margin-left: 0;
+  }
+}
 
 `

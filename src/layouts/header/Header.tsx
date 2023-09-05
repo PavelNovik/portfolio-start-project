@@ -11,13 +11,26 @@ const socials = ["git", "twit", "linkedin"]
 
 
 export const Header: React.FC = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => window.removeEventListener("resize", handleWindowResize)
+    }, []);
+
     return (
         <S.Header>
             <ContainerBox>
                 <HeaderLogo/>
                 <FlexWrapper justify={"space-between"} align={"flex-end"}>
-                    <MobileMenu menuItems={items} socialItems={socials}/>
-                    {/*<DesktopMenu menuItems={items} socialItems={socials}/>*/}
+                    {width < breakpoint ?
+                        <MobileMenu menuItems={items} socialItems={socials}/> :
+                        <DesktopMenu menuItems={items} socialItems={socials}/>
+                    }
                 </FlexWrapper>
             </ContainerBox>
         </S.Header>

@@ -2,9 +2,14 @@ import React from 'react';
 import {Link} from "../../../../components/Link";
 import {S} from "../HeaderMenu_Styles";
 
-export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+type MenuPropsType = {
+    menuItems: Array<string>,
+    isOpen: boolean,
+}
+
+export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
     return (
-        <S.MenuItems>
+        <S.MenuItems isOpen={props.isOpen}>
             {props.menuItems.map((item, index) => {
                 return (
                     <S.MenuItem key={index}>

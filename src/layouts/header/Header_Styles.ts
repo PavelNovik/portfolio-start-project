@@ -8,6 +8,7 @@ const Header = styled.header`
   right: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.7);
+  z-index: 999;
 
   ${ContainerBox} {
     display: flex;
