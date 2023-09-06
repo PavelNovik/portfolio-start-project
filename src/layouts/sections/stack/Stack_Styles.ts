@@ -26,13 +26,31 @@ const Wrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 90px;
-  
+
+  @media ${Theme.media.desktop} {
+    svg {
+      transition: 1s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
   @media ${Theme.media.tablet} {
     gap: 70px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    svg {
+      transition: 1s;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
 
   }
   @media ${Theme.media.mobile} {
+    justify-content: space-evenly;
     gap: 50px;
   }
 `

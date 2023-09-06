@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {SectionText} from "../../../components/SectionTitleText";
 import {Theme} from "../../../styles/Theme";
 import {Link} from "../../../components/Link";
+import {font} from "../../../styles/Common";
 
 const Project = styled.section`
   text-align: center;
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
 `
 const Card = styled.div`
   width: 375px;
-  height: 570px;
+  //height: 570px;
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
@@ -45,54 +46,46 @@ const ImageContainer = styled.div`
   align-items: center;
 
   img {
-    width: 105%;
+    width: 100%;
     object-fit: cover;
+    transform: scale(1.2);
   }
 `
 
 const TextContainer = styled.div`
-padding: 27px 32px 25px 29px;
+  padding: 27px 32px 0 29px;
 `
 
 const Title = styled.h3`
-  color: ${Theme.colors.cardText};
+  ${font({color: `${Theme.colors.cardText}`, weight: 500, lineHeight: 0.93, Fmax: 28, Fmin: 24})}
   text-align: center;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 0.93; /* 92.857% */
 `
 
 const Description = styled.p`
-  color: ${Theme.colors.darkContent};
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.44; /* 144.444% */
-  
+  ${font({color: `${Theme.colors.darkContent}`, weight: 300, lineHeight: 1.44, Fmax: 18, Fmin: 14})}
   margin: 17px 0 12px;
 `
 
 const StackInfo = styled.span`
   display: inline-block;
-  color: ${Theme.colors.titleColor};
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.62; /* 162.5% */
+  ${font({color: `${Theme.colors.titleColor}`, weight: 400, lineHeight: 1.62, Fmax: 16, Fmin: 12})}
   margin-bottom: 21px;
+
   span {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 26px;
+    ${font({weight: 300, lineHeight: 1.85, Fmax: 14, Fmin: 10})}
   }
-  
+
 `
 
 const LinksField = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
+
   ${Link} {
     color: ${Theme.colors.cardText};
-        
+
     span {
       margin-left: 12px;
       text-decoration-line: underline;
@@ -101,7 +94,7 @@ const LinksField = styled.div`
       line-height: 1.62; /* 162.5% */
     }
   }
-  
+
 `
 
 

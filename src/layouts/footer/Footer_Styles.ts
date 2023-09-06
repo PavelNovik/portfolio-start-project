@@ -36,8 +36,8 @@ const Footer = styled.footer`
   @media ${Theme.media.tablet} {
     ${FlexWrapper} {
       flex-direction: column;
-      gap: 25px
-
+      gap: 25px;
+      margin: 45px 0 20px;
     }
   }
 
