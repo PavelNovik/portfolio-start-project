@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { Link } from '../Link';
-import {Theme} from "../../styles/Theme";
+import {S} from "./Social_Styles";
 
 type SocialPropsType = {
     socialItems: Array<string>
@@ -10,7 +9,7 @@ type SocialPropsType = {
 
 export const Social: React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
-        <StyledSocial>
+        <S.Social>
             {
                 props.socialItems.map((item, index) => {
                     return (
@@ -21,28 +20,7 @@ export const Social: React.FC<SocialPropsType> = (props: SocialPropsType) => {
                 }
                 )
             }
-        </StyledSocial>
+        </S.Social>
     );
 };
 
-const StyledSocial = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-
-  li:first-child {
-    margin-left: 15px;
-  }
-
-  li:nth-child(2) ${Link} {
-    transform: translate(-1px, -2px);
-  }
-@media ${Theme.media.tablet} {
-  li:first-child {
-    margin-left: 0;
-  }
-}
-
-`

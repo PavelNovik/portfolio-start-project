@@ -48,6 +48,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: 40px;
     bottom: 50px;
+    transition: 0.5s;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);
@@ -60,6 +61,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: ${Theme.colors.titleColor};
       position: absolute;
       transform: translateY(-10px);
+      transition: 1s;
+
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0);
@@ -74,12 +77,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: ${Theme.colors.titleColor};
       position: absolute;
       transform: translateY(10px);
+      transition: 1s;
+
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(45deg) translateY(0);
       `}
     }
-  }
+  }  
 `
 
 // Menu
@@ -116,15 +121,39 @@ const MenuItem = styled.li`
       // Fmax: 20,
       // Fmin: 10
     })}
-    font-size: 20px;    
+    font-size: 20px;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+      position: absolute;
+      bottom: 1px;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: #2c2c2c;
+
+      &::before {
+        width: 100%;
+        background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+      }
+    }
   }
-  
+
+
   @media ${Theme.media.tablet} {
     ${Link} {
       font-size: 30px;
     }
   }
-  
+
 `
 export const S = {
     DesktopMenu,

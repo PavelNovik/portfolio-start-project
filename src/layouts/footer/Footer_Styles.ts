@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
+import {Link} from "../../components/Link";
 
 
 const Footer = styled.footer`
@@ -49,7 +50,32 @@ const Menu = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+
+    li ${Link} {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 5px;
+        background: ${Theme.colors.titleColor};
+        position: absolute;
+        bottom: 2px;
+        z-index: -1;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        color: #2c2c2c;
+
+        &::before {
+          width: 100%;
+          background: ${Theme.colors.titleColor};
+        }
+      }
+    }
 `
 export const S = {
     Footer,

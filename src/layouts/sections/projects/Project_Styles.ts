@@ -30,6 +30,11 @@ const Card = styled.div`
   overflow: hidden;
   background-color: white;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
+
+  &:hover {
+    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.30);
+    outline: 1px solid rgba(0, 0, 0, 0.10);
+  }
 `
 
 const ImageContainer = styled.div`
