@@ -33,6 +33,7 @@ const Wrapper = styled.div`
 
       &:hover {
         transform: scale(1.5);
+        filter: drop-shadow( .5rem .5rem .6rem ${Theme.colors.darkContent});
       }
     }
   }
@@ -45,6 +46,7 @@ const Wrapper = styled.div`
 
       &:hover {
         transform: scale(1.3);
+        filter: drop-shadow( .3rem .3rem .4rem ${Theme.colors.darkContent});
       }
     }
 

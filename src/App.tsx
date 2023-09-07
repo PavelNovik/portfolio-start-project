@@ -6,7 +6,6 @@ import {About} from "./layouts/sections/about/About";
 import {Stack} from "./layouts/sections/stack/Stack";
 import {Project} from "./layouts/sections/projects/Project";
 import {Contact} from "./layouts/sections/contact/Contact";
-import styled from "styled-components";
 import {Footer} from "./layouts/footer/Footer";
 
 

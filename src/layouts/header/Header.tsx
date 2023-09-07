@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderLogo} from "./headerLogo/HeaderLogo";
 import {S} from "./Header_Styles";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
+import {Button} from "../../components/button/Button";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 const socials = ["git", "twit", "linkedin"]
@@ -13,7 +14,7 @@ const socials = ["git", "twit", "linkedin"]
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 768;
+    const breakpoint = 769;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth);
@@ -26,6 +27,7 @@ export const Header: React.FC = () => {
         <S.Header>
             <ContainerBox>
                 <HeaderLogo/>
+                <Button/>
                 <FlexWrapper justify={"space-between"} align={"flex-end"}>
                     {width < breakpoint ?
                         <MobileMenu menuItems={items} socialItems={socials}/> :
