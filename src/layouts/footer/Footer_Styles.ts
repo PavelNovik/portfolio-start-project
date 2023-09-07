@@ -22,7 +22,7 @@ const Footer = styled.footer`
       text-align: center;
       font-family: "Poppins", sans-serif;
 
-      background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+      background: ${Theme.colors.accentGradient};
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

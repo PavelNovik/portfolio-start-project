@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import {ContainerBox} from "../../components/ContainerBox";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {Theme} from "../../styles/Theme";
 
 const Header = styled.header`
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: ${Theme.colors.backgroundHeaderColor};
   z-index: 999;
 
   ${ContainerBox} {

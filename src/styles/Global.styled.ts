@@ -16,6 +16,7 @@ export const GlobalStyled = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${Theme.colors.darkContent};
+    background-color: ${Theme.colors.bodyBackground};
 
     min-width: 360px;
   }

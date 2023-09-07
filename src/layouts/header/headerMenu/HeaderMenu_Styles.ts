@@ -20,7 +20,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: ${Theme.colors.backgroundHeaderPopupColor};
   z-index: 99999;
   display: none;
   
@@ -130,7 +130,7 @@ const MenuItem = styled.li`
       display: block;
       width: 0;
       height: 5px;
-      background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+      background: ${Theme.colors.accentGradient};
       position: absolute;
       bottom: 1px;
       z-index: -1;
@@ -142,7 +142,7 @@ const MenuItem = styled.li`
 
       &::before {
         width: 100%;
-        background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+        background: ${Theme.colors.accentGradient};
       }
     }
   }

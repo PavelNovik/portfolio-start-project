@@ -29,11 +29,11 @@ const Card = styled.div`
   //height: 570px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: white;
-  box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
+  background-color: ${Theme.colors.bodyBackground};
+  box-shadow: ${Theme.colors.cardShadow};
 
   &:hover {
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.30);
+    box-shadow: ${Theme.colors.hoverCardShadow};
     outline: 1px solid rgba(0, 0, 0, 0.10);
   }
 `

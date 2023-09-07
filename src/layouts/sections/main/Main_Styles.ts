@@ -19,7 +19,7 @@ const Title = styled.h1`
   letter-spacing: -1px;
 
   span {
-    background: linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%);
+    background: ${Theme.colors.accentGradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -36,7 +36,7 @@ const Photo = styled.div`
   //width: 365px;
   width: calc((100vw - 360px) / (1600 - 360) * (365 - 300) + 300px);
   border-radius: 50%;
-  background: linear-gradient(rgba(231, 15, 170, 1), rgba(0, 192, 253, 1));
+  background: ${Theme.colors.mainBackground};
 
   img {
     //width: 349px;
