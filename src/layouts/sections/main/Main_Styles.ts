@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {font} from "../../../styles/Common";
-import {Theme} from "../../../styles/Theme";
+import {lightTheme} from "../../../styles/Theme";
 
 const Main = styled.section`
   @media screen and (max-width: 650px) {
@@ -12,14 +12,14 @@ const Main = styled.section`
   }
 `
 const Title = styled.h1`
-  ${font({weight: 700, lineHeight: 1.27, color: `${Theme.colors.titleColor}`, Fmax: 58, Fmin: 30})} //font-size: 58px;
-                  //color: ${Theme.colors.titleColor};
+  ${font({weight: 700, lineHeight: 1.27, color: `${lightTheme.colors.titleColor}`, Fmax: 58, Fmin: 30})} //font-size: 58px;
+                  //color: ${lightTheme.colors.titleColor};
           //font-weight: 700;
           //line-height: 1.27; /* 120.69% */
   letter-spacing: -1px;
 
   span {
-    background: ${Theme.colors.accentGradient};
+    background: ${lightTheme.colors.accentGradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -36,7 +36,7 @@ const Photo = styled.div`
   //width: 365px;
   width: calc((100vw - 360px) / (1600 - 360) * (365 - 300) + 300px);
   border-radius: 50%;
-  background: ${Theme.colors.mainBackground};
+  background: ${lightTheme.colors.mainBackground};
 
   img {
     //width: 349px;

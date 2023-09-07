@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../../../styles/Theme";
+import {lightTheme} from "../../../styles/Theme";
 import image from "../../../assets/img/drawing.png"
 import {font} from "../../../styles/Common";
 
@@ -18,16 +18,16 @@ const Wrapper = styled.div`
   max-width: 60%;
   width: 100%;
  
-  @media ${Theme.media.tablet} {
+  @media ${lightTheme.media.tablet} {
     max-width: 80%;
   }
-  @media ${Theme.media.mobile} {
+  @media ${lightTheme.media.mobile} {
     max-width: 100%;
   }
 
 `
 const Title = styled.h2`
-  ${font({weight: 700, color: `${Theme.colors.titleColor}`, lineHeight: 1.24, Fmax: 42, Fmin: 32})}
+  ${font({weight: 700, color: `${lightTheme.colors.titleColor}`, lineHeight: 1.24, Fmax: 42, Fmin: 32})}
   letter-spacing: -0.4px;
 
   margin: 38px 0;
@@ -37,7 +37,7 @@ const Title = styled.h2`
   }
 `
 const Text = styled.p`
-  ${font({weight: 400, color: `${Theme.colors.darkContent}`, lineHeight: 1.44, Fmax: 18, Fmin: 12})}
+  ${font({weight: 400, color: `${lightTheme.colors.darkContent}`, lineHeight: 1.44, Fmax: 18, Fmin: 12})}
 `
 export const S = {
     About,

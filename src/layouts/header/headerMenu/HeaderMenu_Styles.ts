@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import {Link} from "../../../components/Link";
 import {font} from "../../../styles/Common";
-import {Theme} from "../../../styles/Theme";
+import {lightTheme} from "../../../styles/Theme";
 
 // Desktop Menu
 const DesktopMenu = styled.nav`
@@ -20,7 +20,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${Theme.colors.backgroundHeaderPopupColor};
+  background-color: ${lightTheme.colors.backgroundHeaderPopupColor};
   z-index: 99999;
   display: none;
   
@@ -44,7 +44,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 3px;
-    background-color: ${Theme.colors.titleColor};
+    background-color: ${lightTheme.colors.titleColor};
     position: absolute;
     left: 40px;
     bottom: 50px;
@@ -58,7 +58,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 3px;
-      background-color: ${Theme.colors.titleColor};
+      background-color: ${lightTheme.colors.titleColor};
       position: absolute;
       transform: translateY(-10px);
       transition: 1s;
@@ -74,7 +74,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 3px;
-      background-color: ${Theme.colors.titleColor};
+      background-color: ${lightTheme.colors.titleColor};
       position: absolute;
       transform: translateY(10px);
       transition: 1s;
@@ -116,7 +116,7 @@ const MenuItem = styled.li`
     ${font({
       family: '"DM Sans", sans-serif',
       weight: 500,
-      color: `${Theme.colors.darkContent}`,
+      color: `${lightTheme.colors.darkContent}`,
       lineHeight: 1.3,
       // Fmax: 20,
       // Fmin: 10
@@ -130,7 +130,7 @@ const MenuItem = styled.li`
       display: block;
       width: 0;
       height: 5px;
-      background: ${Theme.colors.accentGradient};
+      background: ${lightTheme.colors.accentGradient};
       position: absolute;
       bottom: 1px;
       z-index: -1;
@@ -142,13 +142,13 @@ const MenuItem = styled.li`
 
       &::before {
         width: 100%;
-        background: ${Theme.colors.accentGradient};
+        background: ${lightTheme.colors.accentGradient};
       }
     }
   }
 
 
-  @media ${Theme.media.tablet} {
+  @media ${lightTheme.media.tablet} {
     ${Link} {
       font-size: 30px;
     }

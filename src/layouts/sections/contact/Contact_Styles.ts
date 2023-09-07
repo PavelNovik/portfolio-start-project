@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Theme} from "../../../styles/Theme";
+import {lightTheme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 
 
@@ -19,7 +19,7 @@ const Contact = styled.section`
       display: inline-block;
       height: 2px;
       width: 100%;
-      background-color: ${Theme.colors.darkContent};
+      background-color: ${lightTheme.colors.darkContent};
       opacity: 0.3;
 
       position: absolute;
@@ -27,7 +27,7 @@ const Contact = styled.section`
     }
   }
 
-  @media ${Theme.media.tablet} {
+  @media ${lightTheme.media.tablet} {
     ${FlexWrapper} {
       margin-top: 122px;
       gap: 65px;
@@ -35,7 +35,7 @@ const Contact = styled.section`
       align-items: center;
     }
   }
-  @media ${Theme.media.mobile} {
+  @media ${lightTheme.media.mobile} {
     ${FlexWrapper} {
       margin-top: 62px;
      
@@ -48,7 +48,7 @@ const Title = styled.h2`
   ${font({
     family: '"DM Sans", sans-serif',
     weight: 700,
-    color: `${Theme.colors.headingColor}`,
+    color: `${lightTheme.colors.headingColor}`,
     lineHeight: 1.21,
     Fmax: 58,
     Fmin: 30
@@ -68,10 +68,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 65px;
-  color: ${Theme.colors.titleColor};
+  color: ${lightTheme.colors.titleColor};
   
   a {
-    color: ${Theme.colors.titleColor};
+    color: ${lightTheme.colors.titleColor};
   }
   span {
     ${font({
@@ -82,7 +82,7 @@ const Wrapper = styled.div`
     font-size: 18px
   }
   
-@media ${Theme.media.tablet} {
+@media ${lightTheme.media.tablet} {
   flex-direction: column;
 }
 

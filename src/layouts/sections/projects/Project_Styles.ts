@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {SectionText} from "../../../components/SectionTitleText";
-import {Theme} from "../../../styles/Theme";
+import {lightTheme} from "../../../styles/Theme";
 import {Link} from "../../../components/Link";
 import {font} from "../../../styles/Common";
 
@@ -29,11 +29,11 @@ const Card = styled.div`
   //height: 570px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: ${Theme.colors.bodyBackground};
-  box-shadow: ${Theme.colors.cardShadow};
+  background-color: ${lightTheme.colors.bodyBackground};
+  box-shadow: ${lightTheme.colors.cardShadow};
 
   &:hover {
-    box-shadow: ${Theme.colors.hoverCardShadow};
+    box-shadow: ${lightTheme.colors.hoverCardShadow};
     outline: 1px solid rgba(0, 0, 0, 0.10);
   }
 `
@@ -57,18 +57,18 @@ const TextContainer = styled.div`
 `
 
 const Title = styled.h3`
-  ${font({color: `${Theme.colors.cardText}`, weight: 500, lineHeight: 0.93, Fmax: 28, Fmin: 24})}
+  ${font({color: `${lightTheme.colors.cardText}`, weight: 500, lineHeight: 0.93, Fmax: 28, Fmin: 24})}
   text-align: center;
 `
 
 const Description = styled.p`
-  ${font({color: `${Theme.colors.darkContent}`, weight: 300, lineHeight: 1.44, Fmax: 18, Fmin: 14})}
+  ${font({color: `${lightTheme.colors.darkContent}`, weight: 300, lineHeight: 1.44, Fmax: 18, Fmin: 14})}
   margin: 17px 0 12px;
 `
 
 const StackInfo = styled.span`
   display: inline-block;
-  ${font({color: `${Theme.colors.titleColor}`, weight: 400, lineHeight: 1.62, Fmax: 16, Fmin: 12})}
+  ${font({color: `${lightTheme.colors.titleColor}`, weight: 400, lineHeight: 1.62, Fmax: 16, Fmin: 12})}
   margin-bottom: 21px;
 
   span {
@@ -84,7 +84,7 @@ const LinksField = styled.div`
   margin-bottom: 25px;
 
   ${Link} {
-    color: ${Theme.colors.cardText};
+    color: ${lightTheme.colors.cardText};
 
     span {
       margin-left: 12px;

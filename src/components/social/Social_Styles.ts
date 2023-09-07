@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Link} from "../Link";
-import {Theme} from "../../styles/Theme";
+import {lightTheme} from "../../styles/Theme";
 
 const Social = styled.ul`
   list-style: none;
@@ -22,7 +22,7 @@ const Social = styled.ul`
     transition: 0.5s;
   }
   
-@media ${Theme.media.tablet} {
+@media ${lightTheme.media.tablet} {
   li:first-child {
     margin-left: 0;
   }

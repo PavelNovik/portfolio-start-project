@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {Theme} from "../../styles/Theme";
+import {lightTheme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
 import {Link} from "../../components/Link";
 
@@ -11,7 +11,7 @@ const Footer = styled.footer`
     ${font({
       family: '"DM Sans", sans-serif',
       weight: 400,
-      color: `${Theme.colors.titleColor}`,
+      color: `${lightTheme.colors.titleColor}`,
       lineHeight: 1.45,
       Fmax: 18,
       Fmin: 16
@@ -22,18 +22,18 @@ const Footer = styled.footer`
       text-align: center;
       font-family: "Poppins", sans-serif;
 
-      background: ${Theme.colors.accentGradient};
+      background: ${lightTheme.colors.accentGradient};
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       span {
-        -webkit-text-fill-color: ${Theme.colors.darkContent};
+        -webkit-text-fill-color: ${lightTheme.colors.darkContent};
       }
     }
   }
 
-  @media ${Theme.media.tablet} {
+  @media ${lightTheme.media.tablet} {
     ${FlexWrapper} {
       flex-direction: column;
       gap: 25px;
@@ -60,7 +60,7 @@ const Menu = styled.nav`
         display: block;
         width: 0;
         height: 5px;
-        background: ${Theme.colors.titleColor};
+        background: ${lightTheme.colors.titleColor};
         position: absolute;
         bottom: 2px;
         z-index: -1;
@@ -72,7 +72,7 @@ const Menu = styled.nav`
 
         &::before {
           width: 100%;
-          background: ${Theme.colors.titleColor};
+          background: ${lightTheme.colors.titleColor};
         }
       }
     }

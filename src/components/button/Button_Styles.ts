@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../../styles/Theme";
+import {lightTheme} from "../../styles/Theme";
 
 const Button = styled.div`
   margin-left: 10px;
@@ -29,7 +29,7 @@ const Button = styled.div`
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50%;
-      background: ${Theme.colors.mainBackground};
+      background: ${lightTheme.colors.mainBackground};
       transition: all 0.4s ease;
     }
 
@@ -39,7 +39,7 @@ const Button = styled.div`
       height: 100%;
       border-radius: inherit;
       //background: linear-gradient(330deg, #5b0eeb 0%, #6d5dfc 50%, #8abdff 100%);
-      background: ${Theme.colors.accentGradient};
+      background: ${lightTheme.colors.accentGradient};
       opacity: 0;
       transition: all 0.4s ease;
     }

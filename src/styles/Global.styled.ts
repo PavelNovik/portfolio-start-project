@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { Theme } from './Theme';
+import {lightTheme} from "./Theme";
 
 export const GlobalStyled = createGlobalStyle`
   *, *::before, *::after {
@@ -15,15 +15,17 @@ export const GlobalStyled = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${Theme.colors.darkContent};
-    background-color: ${Theme.colors.bodyBackground};
-
+    color: ${lightTheme.colors.darkContent};
+    background-color: ${lightTheme.colors.bodyBackground};
+    // Changing theme
+    transition: all 0.50s linear;
+    
     min-width: 360px;
   }
 
   a {
     text-decoration: none;
-    color: ${Theme.colors.darkContent};
+    color: ${lightTheme.colors.darkContent};
   }
 
   ul {
@@ -33,7 +35,7 @@ export const GlobalStyled = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
-    color: ${Theme.colors.titleColor};
+    color: ${lightTheme.colors.titleColor};
 
     &:hover {
       cursor: pointer;
@@ -46,10 +48,10 @@ export const GlobalStyled = createGlobalStyle`
     &:first-of-type {
       margin-top: 100px;
     }
-    @media ${Theme.media.tablet} {
+    @media ${lightTheme.media.tablet} {
       padding: 75px 0;
     }
-    @media ${Theme.media.mobile} {
+    @media ${lightTheme.media.mobile} {
       padding: 50px 0;
     }
   }
