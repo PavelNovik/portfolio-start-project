@@ -11,21 +11,19 @@ import {Footer} from "./layouts/footer/Footer";
 
 
 function App() {
-    const [theme, setTheme] = useState('light');
+    // const [theme, setTheme] = useState('light');
 
-    const changeThemeHandler = () => {
-        theme === 'light' ? setTheme('dark') : setTheme('light');
-        console.log(theme);
-    }
+    // const changeThemeHandler = () => {
+    //     console.log(theme)
+    //     theme === 'light' ? setTheme('dark') : setTheme('light');
+    //     console.log(theme);
+    // }
 
 
     return (
         <div className="App">
 
-
-
-
-            <Header onChange={changeThemeHandler}/>
+            <Header/>
             <Main/>
             <About/>
             <Stack/>

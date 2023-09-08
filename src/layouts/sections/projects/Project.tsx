@@ -19,8 +19,8 @@ export const Project: React.FC = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <S.Wrapper>
-                    {projects.map((item) => {
-                        return <ProjCard image={item}/>
+                    {projects.map((item, index) => {
+                        return <ProjCard image={item} key={index}/>
                     })}
                 </S.Wrapper>
 

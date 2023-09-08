@@ -50,18 +50,18 @@ export const About: React.FC = () => {
                         of static files: HTML/CSS/JS.</S.Text>
                     <S.Title>Work Experience</S.Title>
                     {
-                        expCardContent.map((card) => {
+                        expCardContent.map((card, index) => {
                             return (
-                                <AboutCard stage={card.stage} status={card.status} company={card.company}
+                                <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
                                            location={card.location} date={card.date}/>
                             )
                         })
                     }
                     <S.Title>Education</S.Title>
                     {
-                        edCardContent.map((card) => {
+                        edCardContent.map((card, index) => {
                             return (
-                                <AboutCard stage={card.stage} status={card.status} company={card.company}
+                                <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
                                            date={card.date}/>
                             )
                         })

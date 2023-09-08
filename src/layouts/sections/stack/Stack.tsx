@@ -87,9 +87,9 @@ export const Stack: React.FC = () => {
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <S.Wrapper>
                     {
-                        stackItems.map((item) => {
+                        stackItems.map((item, index) => {
                             return (
-                                <Icon iconId={item.iconId} width={item.width} height={item.height} viewBox={item.viewBox}/>
+                                <Icon key={index} iconId={item.iconId} width={item.width} height={item.height} viewBox={item.viewBox}/>
                             )
                         })
                     }
