@@ -46,8 +46,9 @@ export const GlobalStyled = createGlobalStyle`
     padding: 100px 0;
         
     &:first-of-type {
-      margin-top: 100px;
+      padding-top: 200px;
     }
+    
     @media ${lightTheme.media.tablet} {
       padding: 75px 0;
     }

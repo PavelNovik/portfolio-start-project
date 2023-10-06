@@ -1,9 +1,12 @@
 import React from 'react';
-import {Link} from "../../../../components/Link";
 import {S} from "../HeaderMenu_Styles";
 
+export type MenuItems = {
+    title: string
+    href: string
+}
 type MenuPropsType = {
-    menuItems: Array<string>,
+    menuItems: MenuItems[],
     isOpen: boolean,
 }
 
@@ -13,7 +16,7 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
             {props.menuItems.map((item, index) => {
                 return (
                     <S.MenuItem key={index}>
-                        <Link href="#">{item}</Link>
+                        <S.NavLink activeClass="active" to={item.href} smooth={true} spy={true}>{item.title}</S.NavLink>
                     </S.MenuItem>
                 )
             })}

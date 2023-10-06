@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-export const Link = styled.a`
+
+export const MLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

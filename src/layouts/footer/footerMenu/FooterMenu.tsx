@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from '../../../components/Link';
+import { MLink } from '../../../components/Link';
 import { S } from '../Footer_Styles';
+import {MenuItems} from "../../header/headerMenu/menu/Menu";
 
 
 type MenuPropsType = {
-    menuItems: Array<string>,
+    menuItems: MenuItems[],
 
 }
 export const FooterMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
@@ -14,7 +15,7 @@ export const FooterMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
                 {props.menuItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <Link href="#">{item}</Link>
+                            <S.FLink to={item.href} smooth={true} spy={true}>{item.title}</S.FLink>
                         </li>
                     )
                 })}

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import {SectionText} from "../../../components/SectionTitleText";
 import {lightTheme} from "../../../styles/Theme";
-import {Link} from "../../../components/Link";
+import {MLink} from "../../../components/Link";
 import {font} from "../../../styles/Common";
 
 const Project = styled.section`
   text-align: center;
+  padding-bottom: 0;
 
   ${SectionText} {
     margin: 50px 0 110px;
@@ -83,7 +84,7 @@ const LinksField = styled.div`
   align-items: center;
   margin-bottom: 25px;
 
-  ${Link} {
+  ${MLink} {
     color: ${lightTheme.colors.cardText};
 
     span {

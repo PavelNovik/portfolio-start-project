@@ -29,12 +29,8 @@ const Wrapper = styled.div`
 const Title = styled.h2`
   ${font({weight: 700, color: `${lightTheme.colors.titleColor}`, lineHeight: 1.24, Fmax: 42, Fmin: 32})}
   letter-spacing: -0.4px;
-
   margin: 38px 0;
 
-  &:first-child {
-    margin-top: 0;
-  }
 `
 const Text = styled.p`
   ${font({weight: 400, color: `${lightTheme.colors.darkContent}`, lineHeight: 1.44, Fmax: 18, Fmin: 12})}

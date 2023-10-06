@@ -1,12 +1,12 @@
 import React from 'react';
-import {Menu} from "../menu/Menu";
+import {Menu, MenuItems} from "../menu/Menu";
 import {Social} from "../../../../components/social/Social";
 import {S} from "../HeaderMenu_Styles"
 
 
 type HeaderMenuPropsType = {
-    menuItems: Array<string>,
-    socialItems: Array<string>,
+    menuItems: MenuItems[],
+    socialItems: string[],
 
 }
 export const MobileMenu: React.FC<HeaderMenuPropsType> = (props: HeaderMenuPropsType) => {

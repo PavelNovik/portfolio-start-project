@@ -1,12 +1,12 @@
 import React from 'react';
 import {S} from "../HeaderMenu_Styles";
-import {Menu} from "../menu/Menu";
+import {Menu, MenuItems} from "../menu/Menu";
 import {Social} from "../../../../components/social/Social";
 
 
 type HeaderMenuPropsType = {
-    menuItems: Array<string>,
-    socialItems: Array<string>,
+    menuItems: MenuItems[]
+    socialItems: string[]
 
 }
 export const DesktopMenu: React.FC<HeaderMenuPropsType> = (props: HeaderMenuPropsType) => {

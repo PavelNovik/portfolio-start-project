@@ -3,8 +3,9 @@ import {ContainerBox} from "../../components/ContainerBox";
 import {FooterMenu} from "./footerMenu/FooterMenu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {S} from "./Footer_Styles";
+import {MenuItems} from "../header/headerMenu/menu/Menu";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const items: MenuItems[] = [{title:"Home", href: "home"}, {title:"About", href: "about"}, {title:"Tech Stack", href: "stack"}, {title:"Projects", href: "project"}, {title:"Contact", href: "contact"}]
 
 export const Footer: React.FC = () => {
     return (

@@ -1,4 +1,6 @@
 import React from 'react';
+import {Fade} from "react-awesome-reveal";
+
 import {AboutCard} from "./aboutCards/AboutCard";
 import {ContainerBox} from "../../../components/ContainerBox";
 import {S} from "./About_Styles";
@@ -36,8 +38,23 @@ const edCardContent = [
     },
 ]
 export const About: React.FC = () => {
+
+    const expCard = expCardContent.map((card, index) => {
+        return (
+            <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
+                       location={card.location} date={card.date}/>
+        )
+    })
+    const edCard = edCardContent.map((card, index) => {
+        return (
+            <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
+                       date={card.date}/>
+        )
+    })
+
+
     return (
-        <S.About>
+        <S.About id={"about"}>
             <ContainerBox>
 
                 <S.Wrapper>
@@ -48,24 +65,12 @@ export const About: React.FC = () => {
                         as a
                         set
                         of static files: HTML/CSS/JS.</S.Text>
+                    <Fade cascade={true} damping={0.2}>
                     <S.Title>Work Experience</S.Title>
-                    {
-                        expCardContent.map((card, index) => {
-                            return (
-                                <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
-                                           location={card.location} date={card.date}/>
-                            )
-                        })
-                    }
+                    {expCard}
                     <S.Title>Education</S.Title>
-                    {
-                        edCardContent.map((card, index) => {
-                            return (
-                                <AboutCard key={index} stage={card.stage} status={card.status} company={card.company}
-                                           date={card.date}/>
-                            )
-                        })
-                    }
+                    {edCard}
+                    </Fade>
                 </S.Wrapper>
             </ContainerBox>
         </S.About>

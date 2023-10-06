@@ -2,7 +2,8 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {lightTheme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
-import {Link} from "../../components/Link";
+import {MLink} from "../../components/Link";
+import {Link} from "react-scroll";
 
 
 const Footer = styled.footer`
@@ -42,6 +43,35 @@ const Footer = styled.footer`
   }
 
 `
+const FLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: ${lightTheme.colors.titleColor};
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #2c2c2c;
+
+    &::before {
+      width: 100%;
+      background: ${lightTheme.colors.titleColor};
+    }
+  }`
+
 const Menu = styled.nav`
   max-width: 560px;
   width: 100%;
@@ -50,34 +80,10 @@ const Menu = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    li ${Link} {
-      position: relative;
-      z-index: 0;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 5px;
-        background: ${lightTheme.colors.titleColor};
-        position: absolute;
-        bottom: 2px;
-        z-index: -1;
-        transition: 0.5s;
-      }
-
-      &:hover {
-        color: #2c2c2c;
-
-        &::before {
-          width: 100%;
-          background: ${lightTheme.colors.titleColor};
-        }
-      }
-    }
+    
 `
 export const S = {
     Footer,
     Menu,
+    FLink
 }

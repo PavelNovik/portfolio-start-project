@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import {S} from "../Project_Styles";
-import {Link} from "../../../../components/Link";
+import {MLink} from "../../../../components/Link";
 
 type ProjCardPropsType = {
     image: string
@@ -19,8 +19,8 @@ export const ProjCard: React.FC<ProjCardPropsType> = (props: ProjCardPropsType) 
                     project lorem ipsum generator for dummy content</S.Description>
                 <S.StackInfo>Tech stack : <span>HTML , JavaScript, SASS, React</span></S.StackInfo>
                 <S.LinksField>
-                    <Link href={"#"}><Icon iconId={"chain"} width={"20"} height={"20"} viewBox={"0 0 20 20"} /><span>Live Preview</span></Link>
-                    <Link href={"#"}><Icon iconId={"git-small"} width={"20"} height={"20"} viewBox={"0 0 20 20"} /><span>View Code</span></Link>
+                    <MLink href={"#"}><Icon iconId={"chain"} width={"20"} height={"20"} viewBox={"0 0 20 20"} /><span>Live Preview</span></MLink>
+                    <MLink href={"#"}><Icon iconId={"git-small"} width={"20"} height={"20"} viewBox={"0 0 20 20"} /><span>View Code</span></MLink>
                 </S.LinksField>
             </S.TextContainer>
         </S.Card>

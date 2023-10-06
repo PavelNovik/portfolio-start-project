@@ -43,9 +43,7 @@ const Photo = styled.div`
     width: calc((100vw - 360px) / (1600 - 360) * (349 - 288) + 288px);
     object-fit: cover;
     border-radius: 50%;
-
   }
-
 `
 export const S = {
     Main,

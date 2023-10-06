@@ -1,4 +1,6 @@
 import React from 'react';
+import {Fade} from "react-awesome-reveal";
+
 import {Icon} from "../../../components/icon/Icon";
 import {ContainerBox} from "../../../components/ContainerBox";
 import {SectionText, SectionTitle} from "../../../components/SectionTitleText";
@@ -80,19 +82,21 @@ const stackItems = [
 ]
 
 export const Stack: React.FC = () => {
+    const stacks = stackItems.map((item, index) => {
+        return (
+            <Icon key={index} iconId={item.iconId} width={item.width} height={item.height} viewBox={item.viewBox}/>
+        )
+    })
     return (
-        <S.Stack>
+        <S.Stack id={"stack"}>
             <ContainerBox>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <S.Wrapper>
-                    {
-                        stackItems.map((item, index) => {
-                            return (
-                                <Icon key={index} iconId={item.iconId} width={item.width} height={item.height} viewBox={item.viewBox}/>
-                            )
-                        })
-                    }
+                    <Fade cascade={true} damping={0.2}>
+
+                    {stacks}
+                    </Fade>
                 </S.Wrapper>
 
             </ContainerBox>

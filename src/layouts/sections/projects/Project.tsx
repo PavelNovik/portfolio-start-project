@@ -14,7 +14,7 @@ const projects = [proj1, proj2, proj3, proj4,proj5,proj6]
 
 export const Project: React.FC = () => {
     return (
-        <S.Project>
+        <S.Project id={"project"}>
             <ContainerBox>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>

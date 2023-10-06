@@ -5,6 +5,7 @@ import {font} from "../../../styles/Common";
 
 
 const Contact = styled.section`
+  padding-top: 400px;
   text-align: center;
   padding-bottom: 0;
 

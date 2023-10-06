@@ -1,5 +1,5 @@
 import React from 'react';
-import userPhoto from "../../../assets/img/user.webp"
+import userPhoto from "../../../assets/img/user-photo-min.webp"
 import {ContainerBox} from "../../../components/ContainerBox";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {S} from "./Main_Styles";
@@ -9,7 +9,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"home"}>
             <ContainerBox>
                 <FlexWrapper justify={"space-between"} align={"center"}>
 

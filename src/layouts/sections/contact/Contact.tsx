@@ -9,14 +9,14 @@ const socials = ["git", "twit", "linkedin"]
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contact>
+        <S.Contact id={"contact"}>
             <ContainerBox>
-                <S.Title>For any questions please mail me: <br/> <span>hi@pavanmg.in</span> </S.Title>
+                <S.Title>For any questions please mail me: <br/> <span>brn2befree@gmail.com</span> </S.Title>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     <S.Wrapper>
                         <span>+91 12345 09876</span>
-                        <span>info@example.com</span>
+                        <span>brn2befree@gmail.com</span>
                         <Social socialItems={socials}/>
                     </S.Wrapper>
                 </FlexWrapper>

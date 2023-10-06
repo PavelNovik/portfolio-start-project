@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Link} from "../Link";
+import {MLink} from "../Link";
 import {lightTheme} from "../../styles/Theme";
 
 const Social = styled.ul`
@@ -13,7 +13,7 @@ const Social = styled.ul`
     margin-left: 15px;
   }
 
-  li:nth-child(2) ${Link} {
+  li:nth-child(2) ${MLink} {
     transform: translate(-1px, -2px);
   }
   

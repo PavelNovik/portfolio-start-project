@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
-import {Link} from "../../../components/Link";
 import {font} from "../../../styles/Common";
 import {lightTheme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 // Desktop Menu
 const DesktopMenu = styled.nav`
@@ -106,56 +106,65 @@ const MenuItems = styled.ul<{ isOpen: boolean }>`
   `}
   
 `
+const NavLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  ${font({
+    family: '"DM Sans", sans-serif',
+    weight: 500,
+    color: `${lightTheme.colors.darkContent}`,
+    lineHeight: 1.3,
+    // Fmax: 20,
+    // Fmin: 10
+  })}
+  font-size: 20px;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: ${lightTheme.colors.accentGradient};
+    position: absolute;
+    bottom: 1px;
+    z-index: -1;
+    transition: 0.5s;
+
+  }
+
+  &:hover, &.active {
+    cursor: pointer;
+    color: #2c2c2c;
+
+    &::before {
+      width: 100%;
+      background: ${lightTheme.colors.accentGradient};
+    }
+  }  
+`
 const MenuItem = styled.li`
   &:first-child {
     margin-left: 15px;
   }
 
-  ${Link} {
-    ${font({
-      family: '"DM Sans", sans-serif',
-      weight: 500,
-      color: `${lightTheme.colors.darkContent}`,
-      lineHeight: 1.3,
-      // Fmax: 20,
-      // Fmin: 10
-    })}
-    font-size: 20px;
-    position: relative;
-    z-index: 0;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 0;
-      height: 5px;
-      background: ${lightTheme.colors.accentGradient};
-      position: absolute;
-      bottom: 1px;
-      z-index: -1;
-      transition: 0.5s;
-    }
-
-    &:hover {
-      color: #2c2c2c;
-
-      &::before {
-        width: 100%;
-        background: ${lightTheme.colors.accentGradient};
-      }
-    }
+  ${NavLink} {
+   
   }
 
 
   @media ${lightTheme.media.tablet} {
-    ${Link} {
+    ${NavLink} {
       font-size: 30px;
     }
   }
 
 `
 export const S = {
+    NavLink,
     DesktopMenu,
     MobileMenu,
     MobileMenuPopup,
