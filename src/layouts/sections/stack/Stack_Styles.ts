@@ -3,6 +3,9 @@ import {SectionText} from "../../../components/SectionTitleText";
 import {lightTheme} from "../../../styles/Theme";
 
 const Stack = styled.section`
+  position: relative;
+  background-color: #fff;
+
   text-align: center;
 
   ${SectionText} {

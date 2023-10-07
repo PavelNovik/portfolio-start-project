@@ -7,6 +7,9 @@ import {Link} from "react-scroll";
 
 
 const Footer = styled.footer`
+  position: relative;
+  background-color: #fff;
+
 
   ${FlexWrapper} {
     ${font({
@@ -17,7 +20,7 @@ const Footer = styled.footer`
       Fmax: 18,
       Fmin: 16
     })}
-    margin: 45px 0 60px;
+    padding: 45px 0 60px;
 
     p {
       text-align: center;

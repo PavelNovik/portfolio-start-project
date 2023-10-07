@@ -8,6 +8,7 @@ import {Stack} from "./layouts/sections/stack/Stack";
 import {Project} from "./layouts/sections/projects/Project";
 import {Contact} from "./layouts/sections/contact/Contact";
 import {Footer} from "./layouts/footer/Footer";
+import Particle from "./components/particle/Particle";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
     return (
         <div className="App">
-
+            <Particle/>
             <Header/>
             <Main/>
             <About/>

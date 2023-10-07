@@ -5,8 +5,10 @@ import {MLink} from "../../../components/Link";
 import {font} from "../../../styles/Common";
 
 const Project = styled.section`
+  position: relative;
   text-align: center;
   padding-bottom: 0;
+  background-color: #fff;
 
   ${SectionText} {
     margin: 50px 0 110px;

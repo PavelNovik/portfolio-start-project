@@ -5,7 +5,8 @@ import {font} from "../../../styles/Common";
 
 
 const About = styled.section`
-  background: right bottom / contain no-repeat url(${image}) border-box;
+  position: relative;
+  background: #fff right bottom / contain no-repeat url(${image}) border-box;
     // background-image: url(${image});
   // background-repeat: no-repeat;
   // background-position: right top;
