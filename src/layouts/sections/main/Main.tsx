@@ -19,7 +19,7 @@ export const Main: React.FC = () => {
                         My name is <br/>
                         <Typewriter
                             options={{
-                                strings: 'Pavel Novik',
+                                strings: ['Pavel Novik', 'Pawiel Nowik', 'Павел Новiк', 'Павел Новик'],
                                 autoStart: true,
                                 loop: true,
                             }}

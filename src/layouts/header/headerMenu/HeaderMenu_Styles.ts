@@ -20,15 +20,18 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${lightTheme.colors.backgroundHeaderPopupColor};
   z-index: 99999;
-  display: none;
+  transform: translateY(-100%);
+  //display: none;
+  transition: .4s ease-in-out;
   
   ${props => props.isOpen && css<{ isOpen: boolean }>`
+    transform: translateY(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: ${lightTheme.colors.backgroundHeaderPopupColor};
 
   `}
 `
@@ -94,6 +97,8 @@ const MenuItems = styled.ul<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
+  transition: 1s ease-in-out;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     flex-direction: column;
