@@ -15,7 +15,7 @@ export const Contact: React.FC = () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     <S.Wrapper>
-                        <span>+91 12345 09876</span>
+                        <span>+375 29 348 24 04</span>
                         <span>brn2befree@gmail.com</span>
                         <Social socialItems={socials}/>
                     </S.Wrapper>
