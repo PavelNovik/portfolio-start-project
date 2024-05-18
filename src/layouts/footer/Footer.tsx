@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
             <ContainerBox>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <FooterMenu menuItems={items}/>
-                    <p><span>Designed and built by </span>Pavan MG <span> with </span>Love<span> & </span>Coffee</p>
+                    <p><span>Designed and built by </span>Pavel Novik <span> with </span>Love<span> & </span>Coffee</p>
                 </FlexWrapper>
             </ContainerBox>
         </S.Footer>
