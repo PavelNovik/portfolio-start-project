@@ -5,7 +5,6 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderLogo} from "./headerLogo/HeaderLogo";
 import {S} from "./Header_Styles";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
-import {Button} from "../../components/button/Button";
 import {MenuItems} from "./headerMenu/menu/Menu";
 
 const items: MenuItems[] = [{title:"Home", href: "home"}, {title:"About", href: "about"}, {title:"Tech Stack", href: "stack"}, {title:"Projects", href: "project"}, {title:"Contact", href: "contact"}]
