@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg width="97" height="59" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <desc>Created with Pixso.</desc>
+ <defs>
+  <clipPath id="clip2_5657">
+   <rect fill="white" fill-opacity="0" height="59" id="logo 1" width="97"/>
+  </clipPath>
+  <linearGradient id="svg_4">
+   <stop offset="0.002625" stop-color="#00c0fd" stop-opacity="0.996094"/>
+   <stop offset="1" stop-color="#e70faa" stop-opacity="0.996094"/>
+  </linearGradient>
+  <linearGradient id="svg_9">
+   <stop offset="0" stop-color="#00c0fd" stop-opacity="0.996094"/>
+   <stop offset="1" stop-color="#e70faa" stop-opacity="0.996094"/>
+  </linearGradient>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#FFFFFF" fill-opacity="0" height="59" id="logo 1" width="97" x="0" y="-1"/>
+  <g clip-path="url(#clip2_5657)" id="svg_1">
+   <text fill="url(#svg_4)" font-family="Sans-serif" font-size="24" font-weight="bold" id="svg_3" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="49.25" xml:space="preserve" y="54.703125">2befree</text>
+   <text fill="url(#svg_9)" font-family="Sans-serif" font-size="32" font-weight="bold" id="svg_10" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="49.75" xml:space="preserve" y="27.703125">{brn}</text>
+  </g>
+ </g>
+</svg>
