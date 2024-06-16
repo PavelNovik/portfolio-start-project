@@ -1,8 +1,9 @@
 import React from 'react';
 import userPhoto from "../../../assets/img/user-photo-min.webp"
-import {ContainerBox} from "../../../components/ContainerBox";
-import {FlexWrapper} from "../../../components/FlexWrapper";
-import {S} from "./Main_Styles";
+import userPhotoMain from '../../../assets/img/user-photo-min1.webp'
+import { ContainerBox } from "../../../components/ContainerBox";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+import { S } from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
 
@@ -15,8 +16,8 @@ export const Main: React.FC = () => {
 
                     <S.Title>
 
-                        Hi 👋, <br/>
-                        My name is <br/>
+                        Hi 👋, <br />
+                        My name is <br />
                         <Typewriter
                             options={{
                                 strings: ['Pavel Novik', 'Pawiel Nowik', 'Павел Новiк', 'Павел Новик'],
@@ -28,20 +29,20 @@ export const Main: React.FC = () => {
                         I build things for web
 
                     </S.Title>
-                        <Tilt
-                            className="parallax-effect-img"
-                            tiltMaxAngleX={40}
-                            tiltMaxAngleY={40}
-                            perspective={800}
-                            transitionSpeed={1500}
-                            scale={1.1}
-                            gyroscope={true}
-                        >
-                    <S.Photo>
-                            <img src={userPhoto} alt="user"/>
-                    </S.Photo>
+                    <Tilt
+                        className="parallax-effect-img"
+                        tiltMaxAngleX={40}
+                        tiltMaxAngleY={40}
+                        perspective={800}
+                        transitionSpeed={1500}
+                        scale={1.1}
+                        gyroscope={true}
+                    >
+                        <S.Photo>
+                            <img src={userPhotoMain} alt="user" />
+                        </S.Photo>
 
-                        </Tilt>
+                    </Tilt>
                 </FlexWrapper>
             </ContainerBox>
         </S.Main>
